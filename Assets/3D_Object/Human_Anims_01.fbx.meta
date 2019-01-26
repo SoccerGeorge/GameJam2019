@@ -127,6 +127,47 @@ ModelImporter:
     100242: QuickRigCharacter_Spine
     100244: QuickRigCharacter_Spine1
     100246: QuickRigCharacter_Spine2
+    100248: QuickRigCharacter_Ctrl_ChestEndEffector
+    100250: QuickRigCharacter_Ctrl_ChestOriginEffector
+    100252: QuickRigCharacter_Ctrl_Head
+    100254: QuickRigCharacter_Ctrl_HeadEffector
+    100256: QuickRigCharacter_Ctrl_Hips
+    100258: QuickRigCharacter_Ctrl_HipsEffector
+    100260: QuickRigCharacter_Ctrl_LeftAnkleEffector
+    100262: QuickRigCharacter_Ctrl_LeftArm
+    100264: QuickRigCharacter_Ctrl_LeftElbowEffector
+    100266: QuickRigCharacter_Ctrl_LeftFoot
+    100268: QuickRigCharacter_Ctrl_LeftFootEffector
+    100270: QuickRigCharacter_Ctrl_LeftForeArm
+    100272: QuickRigCharacter_Ctrl_LeftHand
+    100274: QuickRigCharacter_Ctrl_LeftHipEffector
+    100276: QuickRigCharacter_Ctrl_LeftKneeEffector
+    100278: QuickRigCharacter_Ctrl_LeftLeg
+    100280: QuickRigCharacter_Ctrl_LeftShoulder
+    100282: QuickRigCharacter_Ctrl_LeftShoulderEffector
+    100284: QuickRigCharacter_Ctrl_LeftToeBase
+    100286: QuickRigCharacter_Ctrl_LeftUpLeg
+    100288: QuickRigCharacter_Ctrl_LeftWristEffector
+    100290: QuickRigCharacter_Ctrl_Neck
+    100292: QuickRigCharacter_Ctrl_Reference
+    100294: QuickRigCharacter_Ctrl_RightAnkleEffector
+    100296: QuickRigCharacter_Ctrl_RightArm
+    100298: QuickRigCharacter_Ctrl_RightElbowEffector
+    100300: QuickRigCharacter_Ctrl_RightFoot
+    100302: QuickRigCharacter_Ctrl_RightFootEffector
+    100304: QuickRigCharacter_Ctrl_RightForeArm
+    100306: QuickRigCharacter_Ctrl_RightHand
+    100308: QuickRigCharacter_Ctrl_RightHipEffector
+    100310: QuickRigCharacter_Ctrl_RightKneeEffector
+    100312: QuickRigCharacter_Ctrl_RightLeg
+    100314: QuickRigCharacter_Ctrl_RightShoulder
+    100316: QuickRigCharacter_Ctrl_RightShoulderEffector
+    100318: QuickRigCharacter_Ctrl_RightToeBase
+    100320: QuickRigCharacter_Ctrl_RightUpLeg
+    100322: QuickRigCharacter_Ctrl_RightWristEffector
+    100324: QuickRigCharacter_Ctrl_Spine
+    100326: QuickRigCharacter_Ctrl_Spine1
+    100328: QuickRigCharacter_Ctrl_Spine2
     400000: //RootNode
     400002: Humanoid_v01:Abs
     400004: Humanoid_v01:Chest
@@ -251,6 +292,47 @@ ModelImporter:
     400242: QuickRigCharacter_Spine
     400244: QuickRigCharacter_Spine1
     400246: QuickRigCharacter_Spine2
+    400248: QuickRigCharacter_Ctrl_ChestEndEffector
+    400250: QuickRigCharacter_Ctrl_ChestOriginEffector
+    400252: QuickRigCharacter_Ctrl_Head
+    400254: QuickRigCharacter_Ctrl_HeadEffector
+    400256: QuickRigCharacter_Ctrl_Hips
+    400258: QuickRigCharacter_Ctrl_HipsEffector
+    400260: QuickRigCharacter_Ctrl_LeftAnkleEffector
+    400262: QuickRigCharacter_Ctrl_LeftArm
+    400264: QuickRigCharacter_Ctrl_LeftElbowEffector
+    400266: QuickRigCharacter_Ctrl_LeftFoot
+    400268: QuickRigCharacter_Ctrl_LeftFootEffector
+    400270: QuickRigCharacter_Ctrl_LeftForeArm
+    400272: QuickRigCharacter_Ctrl_LeftHand
+    400274: QuickRigCharacter_Ctrl_LeftHipEffector
+    400276: QuickRigCharacter_Ctrl_LeftKneeEffector
+    400278: QuickRigCharacter_Ctrl_LeftLeg
+    400280: QuickRigCharacter_Ctrl_LeftShoulder
+    400282: QuickRigCharacter_Ctrl_LeftShoulderEffector
+    400284: QuickRigCharacter_Ctrl_LeftToeBase
+    400286: QuickRigCharacter_Ctrl_LeftUpLeg
+    400288: QuickRigCharacter_Ctrl_LeftWristEffector
+    400290: QuickRigCharacter_Ctrl_Neck
+    400292: QuickRigCharacter_Ctrl_Reference
+    400294: QuickRigCharacter_Ctrl_RightAnkleEffector
+    400296: QuickRigCharacter_Ctrl_RightArm
+    400298: QuickRigCharacter_Ctrl_RightElbowEffector
+    400300: QuickRigCharacter_Ctrl_RightFoot
+    400302: QuickRigCharacter_Ctrl_RightFootEffector
+    400304: QuickRigCharacter_Ctrl_RightForeArm
+    400306: QuickRigCharacter_Ctrl_RightHand
+    400308: QuickRigCharacter_Ctrl_RightHipEffector
+    400310: QuickRigCharacter_Ctrl_RightKneeEffector
+    400312: QuickRigCharacter_Ctrl_RightLeg
+    400314: QuickRigCharacter_Ctrl_RightShoulder
+    400316: QuickRigCharacter_Ctrl_RightShoulderEffector
+    400318: QuickRigCharacter_Ctrl_RightToeBase
+    400320: QuickRigCharacter_Ctrl_RightUpLeg
+    400322: QuickRigCharacter_Ctrl_RightWristEffector
+    400324: QuickRigCharacter_Ctrl_Spine
+    400326: QuickRigCharacter_Ctrl_Spine1
+    400328: QuickRigCharacter_Ctrl_Spine2
     2100000: Shirt
     2100002: Shirt_1
     2100004: Shirt_2
