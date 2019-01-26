@@ -48,10 +48,6 @@ namespace GameFramework
             DontDestroyOnLoad(gameObject);
         }
 
-        private void Start () {
-            CreatePlayerForLevel(0);
-        }
-
         #endregion
 
         #region Private Methods
