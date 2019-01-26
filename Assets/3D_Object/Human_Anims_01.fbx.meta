@@ -222,6 +222,30 @@ ModelImporter:
     2100028: Pants_10
     2100030: Shoes_11
     2100032: Pants_11
+    2300000: Humanoid_v01:Abs
+    2300002: Humanoid_v01:Chest
+    2300004: Humanoid_v01:Head
+    2300006: Humanoid_v01:Hips
+    2300008: Humanoid_v01:L_Calf
+    2300010: Humanoid_v01:L_Forearm1
+    2300012: Humanoid_v01:L_Thigh
+    2300014: Humanoid_v01:L_UpperArm
+    2300016: Humanoid_v01:R_Calf
+    2300018: Humanoid_v01:R_Forearm
+    2300020: Humanoid_v01:R_Thigh
+    2300022: Humanoid_v01:R_UpperArm
+    3300000: Humanoid_v01:Abs
+    3300002: Humanoid_v01:Chest
+    3300004: Humanoid_v01:Head
+    3300006: Humanoid_v01:Hips
+    3300008: Humanoid_v01:L_Calf
+    3300010: Humanoid_v01:L_Forearm1
+    3300012: Humanoid_v01:L_Thigh
+    3300014: Humanoid_v01:L_UpperArm
+    3300016: Humanoid_v01:R_Calf
+    3300018: Humanoid_v01:R_Forearm
+    3300020: Humanoid_v01:R_Thigh
+    3300022: Humanoid_v01:R_UpperArm
     4300000: Humanoid_v01:Hips
     4300002: Humanoid_v01:Abs
     4300004: Humanoid_v01:Chest
