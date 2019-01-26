@@ -218,7 +218,7 @@ namespace GameFramework.Controls
             _stringToKeyCode = new Dictionary<string, KeyCode>();
 
             playerIndex = playerId;
-            controlPrefix = "Keyboard_{1}_".FormatStr(playerIndex);
+            controlPrefix = "Keyboard_{0}_".FormatStr(playerIndex);
 
             left = "LeftArrow";
             right = "RightArrow";

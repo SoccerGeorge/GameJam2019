@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Extensions;
 using GameFramework;
 using GameFramework.Controls;
 
@@ -50,7 +51,8 @@ public class DrunkPlayer : Player
     // Update is called once per frame
     private void Update () {
         Move();
-        AddDrunkennessForce();
+
+        //print("Speed: {0}   Turn: {1}".FormatStr(_speed, _turn));
 
         _animator.SetFloat(SPEED_ANIM, _speed);
         _animator.SetFloat(TURN_ANIM, _turn);
@@ -61,8 +63,8 @@ public class DrunkPlayer : Player
     #region Private Methods
 
     private void AddDrunkennessForce () {
-        _speed += _drunkennessSpeed;
-        _turn += _drunkennessTurn;
+        _speed = Mathf.Lerp(_speed, _drunkennessSpeed, Time.deltaTime);
+        _turn = Mathf.Lerp(_turn, _drunkennessTurn, Time.deltaTime);
     }
 
     private void NewDrunkenForce() {
@@ -75,6 +77,8 @@ public class DrunkPlayer : Player
     #region Protected Methods
 
     protected override void Move () {
+        AddDrunkennessForce();
+
         // Check if forward or back key is pressed
         if (Input.GetKey(DrunkenControls.ForwardKeyCode) || Input.GetKey(DrunkenControls.BackKeyCode)) {
             if (Input.GetKey(DrunkenControls.BackKeyCode)) {
@@ -83,9 +87,6 @@ public class DrunkPlayer : Player
             else {
                 _speed += 0.25f;
             }
-        }
-        else {
-            _speed = Mathf.Lerp(_speed, 0f, Time.deltaTime);
         }
 
         // Check if left or right key is pressed
@@ -96,9 +97,6 @@ public class DrunkPlayer : Player
             else {
                 _turn += 5f;
             }
-        }
-        else {
-            _turn = 0f;
         }
 
     }
