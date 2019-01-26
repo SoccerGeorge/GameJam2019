@@ -104,6 +104,29 @@ ModelImporter:
     100196: Humanoid_v01:Spine
     100198: Humanoid_v01:Spine1
     100200: Humanoid_v01:Spine2
+    100202: QuickRigCharacter_Head
+    100204: QuickRigCharacter_Hips
+    100206: QuickRigCharacter_LeftArm
+    100208: QuickRigCharacter_LeftFoot
+    100210: QuickRigCharacter_LeftForeArm
+    100212: QuickRigCharacter_LeftHand
+    100214: QuickRigCharacter_LeftLeg
+    100216: QuickRigCharacter_LeftShoulder
+    100218: QuickRigCharacter_LeftToeBase
+    100220: QuickRigCharacter_LeftUpLeg
+    100222: QuickRigCharacter_Neck
+    100224: QuickRigCharacter_Reference
+    100226: QuickRigCharacter_RightArm
+    100228: QuickRigCharacter_RightFoot
+    100230: QuickRigCharacter_RightForeArm
+    100232: QuickRigCharacter_RightHand
+    100234: QuickRigCharacter_RightLeg
+    100236: QuickRigCharacter_RightShoulder
+    100238: QuickRigCharacter_RightToeBase
+    100240: QuickRigCharacter_RightUpLeg
+    100242: QuickRigCharacter_Spine
+    100244: QuickRigCharacter_Spine1
+    100246: QuickRigCharacter_Spine2
     400000: //RootNode
     400002: Humanoid_v01:Abs
     400004: Humanoid_v01:Chest
@@ -205,6 +228,29 @@ ModelImporter:
     400196: Humanoid_v01:Spine
     400198: Humanoid_v01:Spine1
     400200: Humanoid_v01:Spine2
+    400202: QuickRigCharacter_Head
+    400204: QuickRigCharacter_Hips
+    400206: QuickRigCharacter_LeftArm
+    400208: QuickRigCharacter_LeftFoot
+    400210: QuickRigCharacter_LeftForeArm
+    400212: QuickRigCharacter_LeftHand
+    400214: QuickRigCharacter_LeftLeg
+    400216: QuickRigCharacter_LeftShoulder
+    400218: QuickRigCharacter_LeftToeBase
+    400220: QuickRigCharacter_LeftUpLeg
+    400222: QuickRigCharacter_Neck
+    400224: QuickRigCharacter_Reference
+    400226: QuickRigCharacter_RightArm
+    400228: QuickRigCharacter_RightFoot
+    400230: QuickRigCharacter_RightForeArm
+    400232: QuickRigCharacter_RightHand
+    400234: QuickRigCharacter_RightLeg
+    400236: QuickRigCharacter_RightShoulder
+    400238: QuickRigCharacter_RightToeBase
+    400240: QuickRigCharacter_RightUpLeg
+    400242: QuickRigCharacter_Spine
+    400244: QuickRigCharacter_Spine1
+    400246: QuickRigCharacter_Spine2
     2100000: Shirt
     2100002: Shirt_1
     2100004: Shirt_2
@@ -273,6 +319,7 @@ ModelImporter:
     13700020: Humanoid_v01:R_Thigh
     13700022: Humanoid_v01:R_UpperArm
     13700024: Humanoid_v01:Head 1
+    2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
     importMaterials: 1
