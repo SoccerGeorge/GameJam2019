@@ -1,0 +1,171 @@
+fileFormatVersion: 2
+guid: f5e0a40eafa78d048a8dd779ece124eb
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Humanoid_v01:Abs
+    100002: Humanoid_v01:Chest
+    100004: Humanoid_v01:Head
+    100006: Humanoid_v01:L_Calf
+    100008: Humanoid_v01:L_Forearm
+    100010: Humanoid_v01:L_Thigh
+    100012: Humanoid_v01:L_UpperArm
+    100014: Humanoid_v01:R_Calf
+    100016: Humanoid_v01:R_ForeArm
+    100018: Humanoid_v01:R_Thigh
+    100020: Humanoid_v01:R_UpperArm
+    100022: //RootNode
+    400000: Humanoid_v01:Abs
+    400002: Humanoid_v01:Chest
+    400004: Humanoid_v01:Head
+    400006: Humanoid_v01:L_Calf
+    400008: Humanoid_v01:L_Forearm
+    400010: Humanoid_v01:L_Thigh
+    400012: Humanoid_v01:L_UpperArm
+    400014: Humanoid_v01:R_Calf
+    400016: Humanoid_v01:R_ForeArm
+    400018: Humanoid_v01:R_Thigh
+    400020: Humanoid_v01:R_UpperArm
+    400022: //RootNode
+    2100000: Shirt
+    2100002: Shirt_1
+    2100004: Shirt_2
+    2100006: Hair_3
+    2100008: Skin_3
+    2100010: Hat_3
+    2100012: Shirt_4
+    2100014: Skin_4
+    2100016: Skin_5
+    2100018: Shirt_6
+    2100020: Skin_6
+    2100022: Skin_7
+    2100024: Default_8
+    2100026: Pants_8
+    2100028: Shoes_9
+    2100030: Pants_9
+    2100032: Pants_10
+    2100034: Shoes_11
+    2100036: Pants_11
+    2300000: Humanoid_v01:Abs
+    2300002: Humanoid_v01:Chest
+    2300004: Humanoid_v01:Head
+    2300006: Humanoid_v01:L_Calf
+    2300008: Humanoid_v01:L_Forearm
+    2300010: Humanoid_v01:L_Thigh
+    2300012: Humanoid_v01:L_UpperArm
+    2300014: Humanoid_v01:R_Calf
+    2300016: Humanoid_v01:R_ForeArm
+    2300018: Humanoid_v01:R_Thigh
+    2300020: Humanoid_v01:R_UpperArm
+    2300022: //RootNode
+    3300000: Humanoid_v01:Abs
+    3300002: Humanoid_v01:Chest
+    3300004: Humanoid_v01:Head
+    3300006: Humanoid_v01:L_Calf
+    3300008: Humanoid_v01:L_Forearm
+    3300010: Humanoid_v01:L_Thigh
+    3300012: Humanoid_v01:L_UpperArm
+    3300014: Humanoid_v01:R_Calf
+    3300016: Humanoid_v01:R_ForeArm
+    3300018: Humanoid_v01:R_Thigh
+    3300020: Humanoid_v01:R_UpperArm
+    3300022: //RootNode
+    4300000: Humanoid_v01:Hips
+    4300002: Humanoid_v01:Abs
+    4300004: Humanoid_v01:Chest
+    4300006: Humanoid_v01:Head
+    4300008: Humanoid_v01:R_UpperArm
+    4300010: Humanoid_v01:R_ForeArm
+    4300012: Humanoid_v01:L_UpperArm
+    4300014: Humanoid_v01:L_Forearm
+    4300016: Humanoid_v01:L_Thigh
+    4300018: Humanoid_v01:L_Calf
+    4300020: Humanoid_v01:R_Thigh
+    4300022: Humanoid_v01:R_Calf
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
