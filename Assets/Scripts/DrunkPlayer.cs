@@ -45,7 +45,7 @@ public class DrunkPlayer : Player
     // Start is called before the first frame update
     protected override void Start () {
         DrunkenControls = new DrunkControls(PlayerId);
-        InvokeRepeating("NewDrunkenForce", 0, DrunkennessTime);
+        //InvokeRepeating("NewDrunkenForce", 0, DrunkennessTime);
     }
 
     // Update is called once per frame
