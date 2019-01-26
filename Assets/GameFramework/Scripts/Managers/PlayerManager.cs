@@ -66,8 +66,9 @@ namespace GameFramework
         /// Creates a new player for the game.
         /// </summary>
         public Player CreatePlayerForLevel (int playerPrefabId, Vector3? startPosition = null, Quaternion? startRotation = null) {
-            GameObject newPlayerGO = Instantiate(_playerPrefabs[playerPrefabId], startPosition.Value, startRotation.Value);
+            GameObject newPlayerGO = Instantiate(_playerPrefabs[playerPrefabId], startPosition ?? Vector3.zero, startRotation ?? Quaternion.identity);
             Player newPlayer = newPlayerGO.GetComponent<Player>();
+            newPlayer.PlayerId = _players.Count;
             _players.Add(newPlayer);
             return newPlayer;
         }

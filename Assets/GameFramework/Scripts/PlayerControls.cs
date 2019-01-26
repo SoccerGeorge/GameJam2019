@@ -5,22 +5,25 @@ using Extensions;
 
 namespace GameFramework.Controls
 {
+    /// <summary>
+    /// The list of controls for the player.
+    /// Need to update this for every project.
+    /// </summary>
     public enum ControlKey
     {
-        LeftTurn,
-        RightTurn,
+        Left,
+        Right,
         Forward,
-        Reverse,
-        HandBrake,
-        Grab,
-        ShowList,
+        Back,
         Pause,
         Confirm,
-        Cancel,
-        //PowerUp,
-        //Respawn
+        Cancel
     }
 
+    /// <summary>
+    /// The list of gamepads supported for the player.
+    /// Need to update this for every project.
+    /// </summary>
     public enum GamePadType
     {
         XBox,
@@ -31,36 +34,35 @@ namespace GameFramework.Controls
     {
         #region Private Declarations
 
+
         #endregion
 
         #region Protected Declarations
+
+        protected string controlPrefix;
+        protected int playerIndex;
+        protected string left;
+        protected string right;
+        protected string forward;
+        protected string back;
+        protected string pause;
+        protected string confirm;
+        protected string cancel;
 
         #endregion
 
         #region Public Declarations
 
-        public string controlPrefix;
-        public int playerIndex;
-        public string leftTurn;
-        public string rightTurn;
-        public string forward;
-        public string reverse;
-        public string handBrake;
-        public string grab;
-        public string showList;
-        public string pause;
-        public string confirm;
-        public string cancel;
-        //public string powerUp;
-        //public string respawn;
 
         #endregion
 
         #region Private Methods
 
+
         #endregion
 
         #region Protected Methods
+
 
         #endregion
 
@@ -69,31 +71,22 @@ namespace GameFramework.Controls
         public PlayerControls () { }
 
         public virtual bool UpdateControl (ControlKey controlKey, string newControl) {
-            if (newControl.IsInList(leftTurn, rightTurn, forward, reverse, handBrake, grab, showList, pause, confirm, cancel)) {
+            if (newControl.IsInList(left, right, forward, back, pause, confirm, cancel)) {
                 return false;
             }
 
             switch (controlKey) {
-                case ControlKey.LeftTurn:
-                    leftTurn = newControl;
+                case ControlKey.Left:
+                    left = newControl;
                     break;
-                case ControlKey.RightTurn:
-                    rightTurn = newControl;
+                case ControlKey.Right:
+                    right = newControl;
                     break;
                 case ControlKey.Forward:
                     forward = newControl;
                     break;
-                case ControlKey.Reverse:
-                    reverse = newControl;
-                    break;
-                case ControlKey.HandBrake:
-                    handBrake = newControl;
-                    break;
-                case ControlKey.Grab:
-                    grab = newControl;
-                    break;
-                case ControlKey.ShowList:
-                    showList = newControl;
+                case ControlKey.Back:
+                    back = newControl;
                     break;
                 case ControlKey.Pause:
                     pause = newControl;
@@ -145,13 +138,10 @@ namespace GameFramework.Controls
             gamePad = padType;
             controlPrefix = "{0}_GamePad_{1}_".FormatStr(gamePad, playerIndex);
 
-            leftTurn = "";
-            rightTurn = "";
+            left = "";
+            right = "";
             forward = "";
-            reverse = "";
-            handBrake = "";
-            grab = "";
-            showList = "";
+            back = "";
             pause = "";
             confirm = "";
             cancel = "";
@@ -179,17 +169,15 @@ namespace GameFramework.Controls
 
         #region Protected Declarations
 
+
         #endregion
 
         #region Public Declarations
 
-        public KeyCode LeftTurnKeyCode { get { return _stringToKeyCode[leftTurn]; } }
-        public KeyCode RightTurnKeyCode { get { return _stringToKeyCode[rightTurn]; } }
+        public KeyCode LeftKeyCode { get { return _stringToKeyCode[left]; } }
+        public KeyCode RightKeyCode { get { return _stringToKeyCode[right]; } }
         public KeyCode ForwardKeyCode { get { return _stringToKeyCode[forward]; } }
-        public KeyCode ReverseKeyCode { get { return _stringToKeyCode[reverse]; } }
-        public KeyCode HandBrakeKeyCode { get { return _stringToKeyCode[handBrake]; } }
-        public KeyCode GrabKeyCode { get { return _stringToKeyCode[grab]; } }
-        public KeyCode ShowListKeyCode { get { return _stringToKeyCode[showList]; } }
+        public KeyCode BackKeyCode { get { return _stringToKeyCode[back]; } }
         public KeyCode PauseKeyCode { get { return _stringToKeyCode[pause]; } }
         public KeyCode ConfirmKeyCode { get { return _stringToKeyCode[confirm]; } }
         public KeyCode CancelKeyCode { get { return _stringToKeyCode[cancel]; } }
@@ -198,7 +186,12 @@ namespace GameFramework.Controls
 
         #region Private Methods
 
-        private KeyCode FindKeyCodeFromString (string keyCodeStr) {
+
+        #endregion
+
+        #region Protected Methods
+
+        protected KeyCode FindKeyCodeFromString (string keyCodeStr) {
             foreach (KeyCode key in System.Enum.GetValues(typeof(KeyCode))) {
                 if (key.ToString() == keyCodeStr) {
                     return key;
@@ -207,19 +200,15 @@ namespace GameFramework.Controls
             return KeyCode.None;
         }
 
-        private void UpdateStringToKeyCodeDic () {
+        protected void UpdateStringToKeyCodeDic () {
             _stringToKeyCode.Clear();
 
-            string[] controls = new string[] { leftTurn, rightTurn, forward, reverse, handBrake, grab, showList, pause, confirm, cancel };
+            string[] controls = new string[] { left, right, forward, back, pause, confirm, cancel };
 
             foreach (string str in controls) {
                 _stringToKeyCode[str] = FindKeyCodeFromString(str);
             }
         }
-
-        #endregion
-
-        #region Protected Methods
 
         #endregion
 
@@ -231,13 +220,10 @@ namespace GameFramework.Controls
             playerIndex = playerId;
             controlPrefix = "Keyboard_{1}_".FormatStr(playerIndex);
 
-            leftTurn = "LeftArrow";
-            rightTurn = "RightArrow";
+            left = "LeftArrow";
+            right = "RightArrow";
             forward = "UpArrow";
-            reverse = "DownArrow";
-            handBrake = "LeftControl";
-            grab = "LefShift";
-            showList = "Tab";
+            back = "DownArrow";
             pause = "Escape";
             confirm = "Enter";
             cancel = "Backspace";
@@ -256,13 +242,10 @@ namespace GameFramework.Controls
         }
 
         public override void ResetControls () {
-            leftTurn = "LeftArrow";
-            rightTurn = "RightArrow";
+            left = "LeftArrow";
+            right = "RightArrow";
             forward = "UpArrow";
-            reverse = "DownArrow";
-            handBrake = "LeftControl";
-            grab = "LefShift";
-            showList = "Tab";
+            back = "DownArrow";
             pause = "Escape";
             confirm = "Enter";
             cancel = "Backspace";

@@ -5,7 +5,7 @@ using GameFramework.Controls;
 
 namespace GameFramework
 {
-    public class Player : MonoBehaviour
+    public abstract class Player : MonoBehaviour
     {
         #region Private Declarations
 
@@ -21,12 +21,14 @@ namespace GameFramework
 
         public bool UsingKeyboard { get; protected set; }
         public bool UsingGamePad { get; protected set; }
+        public int PlayerId { get; set; }
         public PlayerControls Controls { get; protected set; }
 
         #endregion
 
         #region MonoBehaviour
 
+        protected abstract void Start ();
 
         #endregion
 
@@ -37,6 +39,7 @@ namespace GameFramework
 
         #region Protected Methods
 
+        protected abstract void Move ();
 
         #endregion
 
