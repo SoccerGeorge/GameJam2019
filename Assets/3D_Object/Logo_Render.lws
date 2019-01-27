@@ -8,7 +8,7 @@ FrameStep 1
 RenderRangeObject 0
 RenderRangeArbitrary 1-120
 PreviewFirstFrame 0
-PreviewLastFrame 120
+PreviewLastFrame 3
 PreviewFrameStep 1
 CurrentFrame 0
 FramesPerSecond 30
@@ -57,7 +57,7 @@ ColorSpaceAffectPicker 0
 FirstBackgroundImageSyncFrame 0
 NavigationDesiredDevice (none)
 
-LoadObjectLayer 1 10000000 C:Users/Gabe/Documents/GitHub/GameJam2019/Assets/3D_Object/Logo_AlmostThere.lwo
+LoadObjectLayer 1 10000000 3D_Object/Logo_AlmostThere.lwo
 ChangeObject 0
 ShowObject 7 7
 Group 0
@@ -282,7 +282,7 @@ NodeEdges 0
   }
 }
 
-LoadObjectLayer 2 10000001 C:Users/Gabe/Documents/GitHub/GameJam2019/Assets/3D_Object/Logo_AlmostThere.lwo
+LoadObjectLayer 2 10000001 3D_Object/Logo_AlmostThere.lwo
 ChangeObject 0
 ShowObject 7 7
 Group 0
@@ -559,7 +559,7 @@ Channel 2
 Channel 3
 { Envelope
   1
-  Key 0.0069815153256058693 0 0 0 0 0 0 0 0
+  Key 0.0069815153256058684 0 0 0 0 0 0 0 0
   Behaviors 1 1
 }
 Channel 4
@@ -654,19 +654,19 @@ Channel 1
 Channel 2
 { Envelope
   1
-  Key -0.097141966223716736 0 0 0 0 0 0 0 0
+  Key -0.097141966223716722 0 0 0 0 0 0 0 0
   Behaviors 1 1
 }
 Channel 3
 { Envelope
   1
-  Key -1.6615545749664307 0 0 0 0 0 0 0 0
+  Key -1.6615545749664309 0 0 0 0 0 0 0 0
   Behaviors 1 1
 }
 Channel 4
 { Envelope
   1
-  Key -0.22340208292007446 0 0 0 0 0 0 0 0
+  Key -0.22340208292007449 0 0 0 0 0 0 0 0
   Behaviors 1 1
 }
 Channel 5
@@ -738,7 +738,7 @@ NumChannels 9
 Channel 0
 { Envelope
   1
-  Key -2.0985512733459473 0 0 0 0 0 0 0 0
+  Key -2.0985512733459477 0 0 0 0 0 0 0 0
   Behaviors 1 1
 }
 Channel 1
@@ -832,38 +832,56 @@ CameraMotion
 NumChannels 6
 Channel 0
 { Envelope
-  1
-  Key 0 0 0 0 0 0 0 0 0
+  4
+  Key 1.1920928955078125e-007 0 0 0 0 0 0 0 0
+  Key 1.1920928955078125e-007 0.033333333333333333 0 0 0 0 0 0 0
+  Key 0.16599318385124207 0.066666666666666666 0 0 0 0 0 0 0
+  Key 1.1920928955078125e-007 0.10000000149011612 0 0 0 0 0 0 0
   Behaviors 1 1
 }
 Channel 1
 { Envelope
-  1
-  Key -0.67789971828460693 0 0 0 0 0 0 0 0
+  4
+  Key -1.9179455041885376 0 0 0 0 0 0 1.0275599501233501 0
+  Key -1.4746855497360229 0.033333333333333333 0 0 0 0 0.34347142264041169 0.6869428606351925 0
+  Key -1.7155647277832031 0.066666666666666666 0 0 0 0 0.29357715784958394 0.29357717097350566 0
+  Key -0.88753122091293335 0.10000000149011612 0 0 0 0 0.58471800386145634 0 0
   Behaviors 1 1
 }
 Channel 2
 { Envelope
-  1
-  Key -1.3263000249862671 0 0 0 0 0 0 0 0
+  4
+  Key -3.2382802963256836 0 0 0 0 0 0 -0.30838371975552276 0
+  Key -2.5122499465942383 0.033333333333333333 0 0 0 0 -0.10308011219282777 -0.20616022899369565 0
+  Key -3.4905352592468262 0.066666666666666666 0 0 0 0 -0.51763533388893301 -0.51763535702903574 0
+  Key -3.547520637512207 0.10000000149011612 0 0 0 0 -1.030974962005629 0 0
   Behaviors 1 1
 }
 Channel 3
 { Envelope
-  1
-  Key -0.0034906584769487381 0 0 0 0 0 0 0 0
+  4
+  Key 0 0 0 0 0 0 0 0 0
+  Key 0 0.033333333333333333 0 0 0 0 0 0 0
+  Key 0.29496076703071594 0.066666666666666666 0 0 0 0 0 0 0
+  Key 0 0.10000000149011612 0 0 0 0 0 0 0
   Behaviors 1 1
 }
 Channel 4
 { Envelope
-  1
-  Key -0.13788098096847534 0 0 0 0 0 0 0 0
+  4
+  Key -0.27925273776054382 0 0 0 0 0 0 0 0
+  Key -0.27925273776054382 0.033333333333333333 0 0 0 0 0 0 0
+  Key -0.27925273776054382 0.066666666666666666 0 0 0 0 0 0 0
+  Key -0.27925273776054382 0.10000000149011612 0 0 0 0 0 0 0
   Behaviors 1 1
 }
 Channel 5
 { Envelope
-  1
+  4
   Key 0 0 0 0 0 0 0 0 0
+  Key 0 0.033333333333333333 0 0 0 0 0 0 0
+  Key 0 0.066666666666666666 0 0 0 0 0 0 0
+  Key 0 0.10000000149011612 0 0 0 0 0 0 0
   Behaviors 1 1
 }
 IKInitCustomFrame 0
@@ -882,10 +900,10 @@ SplineFlags 0
 SplineFit 0
 IKInitialState 0
 UseIKChainValues 1
-ZoomFactor 1.13
+ZoomFactor 1.97
 ZoomType 1
 ResolutionMultiplier 1.0
-FrameSize 1440 1080
+FrameSize 1920 1080
 PixelAspect 1
 MotionBlur 0
 MotionBlurPasses 1
@@ -925,7 +943,7 @@ BackgroundColor 0 0 0
 BGImage
 { Clip
   { Still
-    "C:Users/Gabe/Documents/GitHub/GameJam2019/Assets/3D_Object/texture/backgroundCrosswalk_ForScreen.jpg"
+    "3D_Object/texture/backgroundCrosswalk_ForScreen.jpg"
   }
   Flags 80
 }
@@ -978,7 +996,7 @@ DefineView 1
 ViewType 1
 ViewLevel 3
 CenterItem 1
-ViewAimpoint 0 0 0
+ViewAimpoint 1.192093e-007 -1.917946 -3.23828
 ViewZoomFactor 3.458148
 ViewXRay 1
 ViewMBDofPreview 0
@@ -1006,7 +1024,7 @@ CameraViewBG 2
 ShowMotionPath 1
 ShowFogRadius 0
 ShowFogEffect 0
-ShowFieldChart 0
+ShowFieldChart 1
 OverlayColor_fv 0 0 0
 MeshBackgroundGroup 1
 Plugin VirtualStudio 1 VirtualStudio
@@ -1041,13 +1059,13 @@ Clip 0
 }
 Clip 1
 { ClipObject
-  "backgroundCrosswalk_ForScreen.jpg"
+  "DoubleGradient.jpg"
   128
   0
 }
 Clip 2
 { ClipObject
-  "DoubleGradient.jpg"
+  "backgroundCrosswalk_ForScreen.jpg"
   128
   0
 }
