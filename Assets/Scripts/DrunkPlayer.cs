@@ -69,7 +69,7 @@ public class DrunkPlayer : Player
     }
 
     private void NewDrunkenForce() {
-        _drunkennessSpeed = Random.value;
+        _drunkennessSpeed = Random.Range(-0.2f, 0.2f);
         _drunkennessTurn = Random.Range(-45f, 45f);
         DrunkenControls.SwapControls();
     }
@@ -96,10 +96,10 @@ public class DrunkPlayer : Player
         // Check if left or right key is pressed
         if (Input.GetKey(DrunkenControls.LeftKeyCode) || Input.GetKey(DrunkenControls.RightKeyCode)) {
             if (Input.GetKey(DrunkenControls.LeftKeyCode)) {
-                _turn -= 5f;
+                _turn -= 10f;
             }
             else {
-                _turn += 5f;
+                _turn += 10f;
             }
         }
     }

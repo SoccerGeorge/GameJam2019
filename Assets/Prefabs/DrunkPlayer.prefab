@@ -1939,7 +1939,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animator: {fileID: 1464077998}
-  DrunkennessTime: 120
+  DrunkennessTime: 20
 --- !u!1 &1541781151
 GameObject:
   m_ObjectHideFlags: 0
