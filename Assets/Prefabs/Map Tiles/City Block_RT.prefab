@@ -691,19 +691,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 11.509642, y: 14.961688, z: 11.243266}
   m_Center: {x: 0.86193746, y: 7.1347537, z: -0.26621848}
---- !u!65 &7475063833600243763
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 829772119556562028}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.1071658, y: 0.5835473, z: 1.0117439}
-  m_Center: {x: -0.0000028467575, y: 0.2917735, z: -0.30417013}
 --- !u!65 &2960565232193243410
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -717,6 +704,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.60096246, y: 1.0828806, z: 0.33083692}
   m_Center: {x: 0.27561688, y: 0.54318315, z: 0.38874337}
+--- !u!65 &7475063833600243763
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 829772119556562028}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.1071658, y: 0.5835473, z: 1.0117439}
+  m_Center: {x: -0.0000028467575, y: 0.2917735, z: -0.30417013}
 --- !u!65 &4852506635205307432
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2212,19 +2212,6 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!65 &8291031134835067793
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 829772120808399337}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.1071658, y: 0.5835473, z: 1.0117439}
-  m_Center: {x: -0.0000028467575, y: 0.2917735, z: -0.30417013}
 --- !u!65 &7680396175199544185
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2238,6 +2225,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.6269791, y: 1.0828806, z: 0.33603927}
   m_Center: {x: 0.27301514, y: 0.54318315, z: 0.37573507}
+--- !u!65 &8291031134835067793
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 829772120808399337}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.1071658, y: 0.5835473, z: 1.0117439}
+  m_Center: {x: -0.0000028467575, y: 0.2917735, z: -0.30417013}
 --- !u!65 &7648006663191893984
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4448,7 +4448,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fc5ae33c94518d945a0d93aac2c3c0e6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.1489
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fc5ae33c94518d945a0d93aac2c3c0e6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4635,7 +4635,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2e6e9c0c0cb4b7f4bab48b071df012b0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.1837
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2e6e9c0c0cb4b7f4bab48b071df012b0, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6642,7 +6642,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fc5ae33c94518d945a0d93aac2c3c0e6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.1489
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fc5ae33c94518d945a0d93aac2c3c0e6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8568,7 +8568,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fc5ae33c94518d945a0d93aac2c3c0e6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.1489
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fc5ae33c94518d945a0d93aac2c3c0e6, type: 3}
       propertyPath: m_LocalPosition.z

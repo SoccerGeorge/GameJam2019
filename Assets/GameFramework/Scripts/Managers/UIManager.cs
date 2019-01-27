@@ -12,6 +12,7 @@ namespace GameFramework
     {
         #region Private Declarations
 
+        private CanvasGroup _prevCanvasGroup;
 
         #endregion
 
@@ -62,6 +63,8 @@ namespace GameFramework
                 previousMenu.blocksRaycasts = false;
                 previousMenu.alpha = 0;
                 previousMenu.gameObject.SetActive(false);
+
+                _prevCanvasGroup = previousMenu;
 
                 // Enable next menu
                 nextMenu.gameObject.SetActive(true);
@@ -115,6 +118,14 @@ namespace GameFramework
                     StartCoroutine(menuSwitchCoroutine);
                 }
             }
+        }
+
+        public CanvasGroup GetActiveMenu () {
+            return MenuList[ActiveMenuIndex];
+        }
+
+        public void GoToPreviousMenu () {
+            SwitchToMenu(_prevCanvasGroup);
         }
 
         #endregion

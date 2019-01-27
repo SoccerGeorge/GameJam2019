@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Extensions;
 using GameFramework;
 using GameFramework.Controls;
@@ -10,7 +11,8 @@ public class DrunkPlayer : Player
 {
     #region Private Declarations
 
-    [SerializeField][Tooltip("Animator for the player")]
+    [SerializeField]
+    [Tooltip("Animator for the player")]
     private Animator _animator = null;
 
     private const string SPEED_ANIM = "Speed";
@@ -20,6 +22,11 @@ public class DrunkPlayer : Player
     private float _drunkennessSpeed = 0f;
     private float _drunkennessTurn = 0f;
     private Transform _target;
+    private bool _canMove = false;
+    private int _score = 60;
+
+    private Text _scoreText;
+    private Text _distance;
 
     #endregion
 
@@ -47,19 +54,38 @@ public class DrunkPlayer : Player
         DrunkenControls = new DrunkControls(PlayerId);
         _turn = transform.rotation.eulerAngles.y;
         _drunkennessTurn = transform.rotation.eulerAngles.y;
-        InvokeRepeating("NewDrunkenForce", 10f, DrunkennessTime);
+        InvokeRepeating("NewDrunkenForce", 6f, DrunkennessTime);
+
+        Transform overlay = UIManager.Instance.GetActiveMenu().transform.GetChild(0).GetChild(0);
+        _scoreText = overlay.GetChild(0).GetComponent<Text>();
+        _distance = overlay.GetChild(1).GetComponent<Text>();
+    }
+
+    private void Update () {
+        if (Input.GetKey(DrunkenControls.PauseKeyCode)) {
+            UIManager.Instance.SwitchToMenuByIndex(4);
+            GameManager.Instance.Pause();
+        }
     }
 
     // Update is called once per frame
     private void LateUpdate () {
-        if (_animator.enabled) {
+        if (_animator.enabled && _canMove) {
             Move();
 
             _animator.SetFloat(SPEED_ANIM, _speed);
-            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.AngleAxis(_turn, Vector3.up), Time.deltaTime);
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.AngleAxis(_turn, Vector3.up), Time.deltaTime * 5f);
+            if (_speed > 0.1f || _speed < -0.1) {
+                _speed = Mathf.Lerp(_speed, 0f, Time.deltaTime);
+            }
+            else {
+                _speed = 0f;
+            }
+
         }
 
-        Vector3.Distance(transform.position, _target.position);
+        _scoreText.text = _score.ToString();
+        _distance.text = "{0} meters from home".FormatStr(Vector3.Distance(transform.position, _target.position).ToString("F3"));
     }
 
     #endregion
@@ -71,10 +97,11 @@ public class DrunkPlayer : Player
         _turn = Mathf.Lerp(_turn, _drunkennessTurn, Time.deltaTime);
     }
 
-    private void NewDrunkenForce() {
+    private void NewDrunkenForce () {
         _drunkennessSpeed = Random.Range(-0.2f, 0.2f);
-        _drunkennessTurn = Random.Range(-45f, 45f);
+        _drunkennessTurn = Random.Range(-5f, 5f);
         DrunkenControls.SwapControls();
+        _canMove = true;
     }
 
     #endregion
@@ -111,8 +138,33 @@ public class DrunkPlayer : Player
 
     #region Public Methods
 
-    public void SetTarget(Transform target) {
+    public void Win () {
+        UIManager.Instance.SwitchToMenuByIndex(5);
+    }
+
+    public void HighVal () {
+        UIManager.Instance.SwitchToMenuByIndex(5);
+
+    }
+
+    public void MidVal () {
+        UIManager.Instance.SwitchToMenuByIndex(5);
+    }
+
+    public void LowVal () {
+        UIManager.Instance.SwitchToMenuByIndex(5);
+    }
+
+    public void Lose () {
+        UIManager.Instance.SwitchToMenuByIndex(6);
+    }
+
+    public void SetTarget (Transform target) {
         _target = target;
+    }
+
+    public void EnableAnimator () {
+        _animator.enabled = true;
     }
 
     public void DisableAnimator () {
@@ -128,13 +180,34 @@ public class DrunkPlayer : Player
                 case "Ignore":
                     break;
                 case "Win":
-                case "HighVal":
-                case "MidVal":
-                case "LowVal":
-                case "Lose":
-                default:
-                    print("{0} made contact with {1} collider".FormatStr(contactPoint.thisCollider.gameObject, contactPoint.otherCollider.gameObject));
+                    _score += 50;
+                    Invoke("Win", 5f);
                     DisableAnimator();
+                    break;
+                case "HighVal":
+                    _score += 100;
+                    Invoke("HighVal", 5f);
+                    DisableAnimator();
+                    break;
+                case "MidVal":
+                    _score += 25;
+                    Invoke("MidVal", 5f);
+                    DisableAnimator();
+                    break;
+                case "LowVal":
+                    _score += 10;
+                    Invoke("LowVal", 5f);
+                    DisableAnimator();
+                    break;
+                case "Lose":
+                    Invoke("Lose", 5f);
+                    DisableAnimator();
+                    break;
+                default:
+                    _score -= 2;
+                    _animator.SetFloat(SPEED_ANIM, 0f);
+                    transform.position += contactPoint.normal * 0.1f;
+                    _animator.SetFloat(SPEED_ANIM, _speed);
                     break;
             }
         }
