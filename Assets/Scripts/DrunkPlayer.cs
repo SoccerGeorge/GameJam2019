@@ -19,6 +19,7 @@ public class DrunkPlayer : Player
     private float _turn = 0f;
     private float _drunkennessSpeed = 0f;
     private float _drunkennessTurn = 0f;
+    private Transform _target;
 
     #endregion
 
@@ -57,6 +58,8 @@ public class DrunkPlayer : Player
             _animator.SetFloat(SPEED_ANIM, _speed);
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.AngleAxis(_turn, Vector3.up), Time.deltaTime);
         }
+
+        Vector3.Distance(transform.position, _target.position);
     }
 
     #endregion
@@ -108,6 +111,10 @@ public class DrunkPlayer : Player
 
     #region Public Methods
 
+    public void SetTarget(Transform target) {
+        _target = target;
+    }
+
     public void DisableAnimator () {
         _animator.enabled = false;
     }
@@ -131,7 +138,6 @@ public class DrunkPlayer : Player
                     break;
             }
         }
-
     }
 
     #endregion

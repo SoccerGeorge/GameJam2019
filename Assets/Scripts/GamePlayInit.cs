@@ -5,9 +5,12 @@ using GameFramework;
 
 public class GamePlayInit : MonoBehaviour
 {
+    public Transform target;
+
     // Start is called before the first frame update
     private void Awake () {
-        PlayerManager.Instance.CreatePlayerForLevel(0, transform.position, transform.rotation);
         UIManager.Instance.SwitchToMenuByIndex(0);
+        DrunkPlayer player = PlayerManager.Instance.CreatePlayerForLevel(0, transform.position, transform.rotation) as DrunkPlayer;
+        player.SetTarget(target);
     }
 }

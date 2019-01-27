@@ -46,3 +46,8 @@ MonoBehaviour:
   _masterAudioMixer: {fileID: 24100000, guid: 5a2b718c625db7d4f9c95fb5d6868ade, type: 2}
   _musicAudioClips: []
   _sfxAudioClips: []
+  MusicAudioClips:
+  - {fileID: 8300000, guid: fa1955c0913ec59469d79c14d6503ec9, type: 3}
+  SfxAudioClips:
+  - {fileID: 8300000, guid: 3ca21986d4b18fd40ad65261f90881d0, type: 3}
+  - {fileID: 8300000, guid: 30419226f59112040a3792670e3c3c3e, type: 3}

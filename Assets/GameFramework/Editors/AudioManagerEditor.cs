@@ -148,6 +148,7 @@ public class AudioManagerEditor : Editor
             EditorGUILayout.LabelField("{0} -".FormatStr(i), indexLabelStyle, GUILayout.Width(35f));
             audioClipKeyValuePair.Name = EditorGUILayout.TextField(audioClipKeyValuePair.Name, GUILayout.Width(100f));
             audioClipKeyValuePair.Clip = EditorGUILayout.ObjectField(audioClipKeyValuePair.Clip, typeof(AudioClip), false, GUILayout.Width(200f)) as AudioClip;
+            sfxAudioClipListProp.GetArrayElementAtIndex(i).objectReferenceValue = audioClipKeyValuePair;
 
             // Add some spacing
             GUILayout.Space(10f);

@@ -37,6 +37,9 @@ namespace GameFramework
         /// <summary> Denotes the instance of the audio manager to make calls from. </summary>
         public static AudioManager Instance { get; private set; }
 
+        public List<AudioClip> MusicAudioClips = new List<AudioClip>();
+        public List<AudioClip> SfxAudioClips = new List<AudioClip>();
+
         #endregion
 
         #region MonoBehaviour
@@ -71,7 +74,7 @@ namespace GameFramework
         }
 
         public AudioClip GetMusicByIndex (int index) {
-            return _musicAudioClips[index].Clip;
+            return MusicAudioClips[index];//.Clip;
         }
 
         public AudioClip GetSfxByName (string sfxName) {
@@ -79,7 +82,7 @@ namespace GameFramework
         }
 
         public AudioClip GetSfxByIndex (int index) {
-            return _sfxAudioClips[index].Clip;
+            return SfxAudioClips[index];//.Clip;
         }
 
         #endregion
