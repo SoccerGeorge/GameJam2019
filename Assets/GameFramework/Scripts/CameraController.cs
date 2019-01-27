@@ -7,8 +7,8 @@ namespace GameFramework
         #region Private Declarations
 
         [SerializeField] private Transform _target;
-        [SerializeField] private Vector2 _rotationRange;
-        [SerializeField] private Vector3 _offset;
+        [SerializeField] private Vector2 _rotationRange = Vector2.zero;
+        [SerializeField] private Vector3 _offset = Vector3.zero;
         [SerializeField] private float _followSpeed = 1f;
 
         private Vector3 _followAngles;
@@ -22,12 +22,13 @@ namespace GameFramework
         // Use this for initialization
         private void Start () {
             _originalRotation = transform.localRotation;
-            if (_target == null) {
-                _target = PlayerManager.Instance.GetPlayer(0).transform;
-            }
         }
 
         private void FixedUpdate () {
+            if (_target == null) {
+                _target = PlayerManager.Instance.GetPlayer(0).transform;
+            }
+
             FollowTarget(Time.deltaTime);
         }
 
@@ -43,7 +44,6 @@ namespace GameFramework
             // tackle rotation around Y first
             Vector3 localTarget = transform.InverseTransformPoint(_target.position);
             float yAngle = Mathf.Atan2(localTarget.x, localTarget.z) * Mathf.Rad2Deg;
-
             yAngle = Mathf.Clamp(yAngle, -_rotationRange.y * 0.5f, _rotationRange.y * 0.5f);
             transform.localRotation = _originalRotation * Quaternion.Euler(0, yAngle, 0);
 
@@ -61,7 +61,7 @@ namespace GameFramework
             transform.localRotation = _originalRotation * Quaternion.Euler(-_followAngles.x, _followAngles.y, 0);
 
             // Update the position
-            Vector3 desiredPos = _target.position + _offset;
+            Vector3 desiredPos = _target.position + (transform.localRotation * _offset);
             Vector3 smoothedPos = Vector3.Lerp(transform.position, desiredPos, _followSpeed * deltaTime);
             transform.position = smoothedPos;
         }

@@ -3,7 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Win
+  - HighVal
+  - MidVal
+  - LowVal
+  - Lose
+  - Ignore
+  - Obstacle
   layers:
   - Default
   - TransparentFX
@@ -15,12 +22,12 @@ TagManager:
   - 
   - PostProcessing
   - Player
-  - WinValueTarget
-  - HighValueTarget
-  - MidValueTarget
-  - LowValueTarget
-  - LoseValueTarget
-  - Obstacle
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 

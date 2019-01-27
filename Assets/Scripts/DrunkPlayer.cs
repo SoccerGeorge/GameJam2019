@@ -11,7 +11,7 @@ public class DrunkPlayer : Player
     #region Private Declarations
 
     [SerializeField][Tooltip("Animator for the player")]
-    private Animator _animator;
+    private Animator _animator = null;
 
     private const string SPEED_ANIM = "Speed";
 
@@ -30,7 +30,7 @@ public class DrunkPlayer : Player
     #region Public Declarations
 
     [Tooltip("Time when drunkenness force changes in seconds")]
-    public int DrunkennessTime = 120;
+    public int DrunkennessTime = 20;
 
     public DrunkControls DrunkenControls {
         get { return Controls as DrunkControls; }
@@ -44,15 +44,19 @@ public class DrunkPlayer : Player
     // Start is called before the first frame update
     protected override void Start () {
         DrunkenControls = new DrunkControls(PlayerId);
+        _turn = transform.rotation.eulerAngles.y;
+        _drunkennessTurn = transform.rotation.eulerAngles.y;
         InvokeRepeating("NewDrunkenForce", 10f, DrunkennessTime);
     }
 
     // Update is called once per frame
-    private void Update () {
-        Move();
+    private void LateUpdate () {
+        if (_animator.enabled) {
+            Move();
 
-        _animator.SetFloat(SPEED_ANIM, _speed);
-        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.AngleAxis(_turn, Vector3.up), Time.deltaTime);
+            _animator.SetFloat(SPEED_ANIM, _speed);
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.AngleAxis(_turn, Vector3.up), Time.deltaTime);
+        }
     }
 
     #endregion
@@ -66,7 +70,7 @@ public class DrunkPlayer : Player
 
     private void NewDrunkenForce() {
         _drunkennessSpeed = Random.value;
-        _drunkennessTurn = Random.Range(-135f, 135f);
+        _drunkennessTurn = Random.Range(-45f, 45f);
         DrunkenControls.SwapControls();
     }
 
@@ -108,6 +112,28 @@ public class DrunkPlayer : Player
         _animator.enabled = false;
     }
 
+    public void CheckCollisionEnter (Collision collision) {
+        int numContacts = collision.contactCount;
+        ContactPoint[] contactPoints = new ContactPoint[numContacts];
+        collision.GetContacts(contactPoints);
+        foreach (ContactPoint contactPoint in contactPoints) {
+            switch (contactPoint.otherCollider.tag) {
+                case "Ignore":
+                    break;
+                case "Win":
+                case "HighVal":
+                case "MidVal":
+                case "LowVal":
+                case "Lose":
+                default:
+                    print("{0} made contact with {1} collider".FormatStr(contactPoint.thisCollider.gameObject, contactPoint.otherCollider.gameObject));
+                    DisableAnimator();
+                    break;
+            }
+        }
+
+    }
+
     #endregion
 }
 
@@ -128,31 +154,13 @@ public class DrunkControls : KeyboardControls
     public void SwapControls () {
         List<string> swappedControls = new List<string>(_controls);
 
-        if (++_swapCount > 3) {
+        if (++_swapCount == 3) {
             _swapCount = 0;
-        }
 
-        switch (_swapCount) {
-            case 1:
-                swappedControls[0] = _controls[3];
-                swappedControls[1] = _controls[2];
-                swappedControls[2] = _controls[0];
-                swappedControls[3] = _controls[1];
-                break;
-            case 2:
-                swappedControls[0] = _controls[1];
-                swappedControls[1] = _controls[0];
-                swappedControls[2] = _controls[3];
-                swappedControls[3] = _controls[2];
-                break;
-            case 3:
-                swappedControls[0] = _controls[2];
-                swappedControls[1] = _controls[3];
-                swappedControls[2] = _controls[1];
-                swappedControls[3] = _controls[0];
-                break;
-            default:
-                break;
+            swappedControls[0] = _controls[1];
+            swappedControls[1] = _controls[0];
+            swappedControls[2] = _controls[3];
+            swappedControls[3] = _controls[2];
         }
 
         left = swappedControls[0];
