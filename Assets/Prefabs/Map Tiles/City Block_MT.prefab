@@ -1504,7 +1504,7 @@ GameObject:
   - component: {fileID: 2246379957046176179}
   m_Layer: 0
   m_Name: Plane
-  m_TagString: Untagged
+  m_TagString: Ignore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2004,7 +2004,7 @@ GameObject:
   - component: {fileID: 2246379957407990286}
   m_Layer: 0
   m_Name: Plane
-  m_TagString: Untagged
+  m_TagString: Ignore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2895,19 +2895,6 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!65 &2949010023631031214
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2535123008384204475}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.42744026, y: 0.25276062, z: 0.20100307}
-  m_Center: {x: 0.004852273, y: 0.004852275, z: 0.0954271}
 --- !u!65 &1060257595876863000
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2921,6 +2908,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.22041284, y: 0.13954273, z: 0.18159533}
   m_Center: {x: 0.09542679, y: -0.05175667, z: -0.101896055}
+--- !u!65 &2949010023631031214
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2535123008384204475}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.42744026, y: 0.25276062, z: 0.20100307}
+  m_Center: {x: 0.004852273, y: 0.004852275, z: 0.0954271}
 --- !u!65 &3025907923584819794
 BoxCollider:
   m_ObjectHideFlags: 0
