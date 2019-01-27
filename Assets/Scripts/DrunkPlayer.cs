@@ -14,7 +14,6 @@ public class DrunkPlayer : Player
     private Animator _animator;
 
     private const string SPEED_ANIM = "Speed";
-    private const string TURN_ANIM = "Turn";
 
     private float _speed = 0f;
     private float _turn = 0f;
@@ -45,17 +44,15 @@ public class DrunkPlayer : Player
     // Start is called before the first frame update
     protected override void Start () {
         DrunkenControls = new DrunkControls(PlayerId);
-        //InvokeRepeating("NewDrunkenForce", 0, DrunkennessTime);
+        InvokeRepeating("NewDrunkenForce", 10f, DrunkennessTime);
     }
 
     // Update is called once per frame
     private void Update () {
         Move();
 
-        //print("Speed: {0}   Turn: {1}".FormatStr(_speed, _turn));
-
         _animator.SetFloat(SPEED_ANIM, _speed);
-        _animator.SetFloat(TURN_ANIM, _turn);
+        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.AngleAxis(_turn, Vector3.up), Time.deltaTime);
     }
 
     #endregion
@@ -70,6 +67,7 @@ public class DrunkPlayer : Player
     private void NewDrunkenForce() {
         _drunkennessSpeed = Random.value;
         _drunkennessTurn = Random.Range(-135f, 135f);
+        DrunkenControls.SwapControls();
     }
 
     #endregion
@@ -89,6 +87,8 @@ public class DrunkPlayer : Player
             }
         }
 
+        _speed = Mathf.Clamp(_speed, -1f, 1f);
+
         // Check if left or right key is pressed
         if (Input.GetKey(DrunkenControls.LeftKeyCode) || Input.GetKey(DrunkenControls.RightKeyCode)) {
             if (Input.GetKey(DrunkenControls.LeftKeyCode)) {
@@ -98,7 +98,6 @@ public class DrunkPlayer : Player
                 _turn += 5f;
             }
         }
-
     }
 
     #endregion

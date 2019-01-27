@@ -14,13 +14,13 @@ TagManager:
   - 
   - 
   - PostProcessing
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - WinValueTarget
+  - HighValueTarget
+  - MidValueTarget
+  - LowValueTarget
+  - LoseValueTarget
+  - Obstacle
   - 
   - 
   - 

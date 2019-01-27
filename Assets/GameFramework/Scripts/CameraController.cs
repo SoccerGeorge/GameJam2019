@@ -22,7 +22,9 @@ namespace GameFramework
         // Use this for initialization
         private void Start () {
             _originalRotation = transform.localRotation;
-
+            if (_target == null) {
+                _target = PlayerManager.Instance.GetPlayer(0).transform;
+            }
         }
 
         private void FixedUpdate () {
