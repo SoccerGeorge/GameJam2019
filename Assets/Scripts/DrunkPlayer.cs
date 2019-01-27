@@ -82,7 +82,7 @@ public class DrunkPlayer : Player
     #region Protected Methods
 
     protected override void Move () {
-        AddDrunkennessForce();
+        //AddDrunkennessForce();
 
         // Check if forward or back key is pressed
         if (Input.GetKey(DrunkenControls.ForwardKeyCode) || Input.GetKey(DrunkenControls.BackKeyCode)) {

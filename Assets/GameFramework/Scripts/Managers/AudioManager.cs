@@ -2,7 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Audio;
+using Extensions;
 
 namespace GameFramework
 {
@@ -39,6 +41,7 @@ namespace GameFramework
 
         public List<AudioClip> MusicAudioClips = new List<AudioClip>();
         public List<AudioClip> SfxAudioClips = new List<AudioClip>();
+        public Slider VolumeSlider;
 
         #endregion
 
@@ -53,6 +56,11 @@ namespace GameFramework
 
             Instance = this;
             DontDestroyOnLoad(gameObject);
+
+            float vol;
+            _masterAudioMixer.GetFloat("Volume", out vol);
+            vol = vol.Remap(-40f, 3f, 0f, 1f);
+            VolumeSlider.value = vol;
         }
 
         #endregion
@@ -83,6 +91,11 @@ namespace GameFramework
 
         public AudioClip GetSfxByIndex (int index) {
             return SfxAudioClips[index];//.Clip;
+        }
+
+        public void UpdateVolume(float vol) {
+            vol = vol.Remap(0f, 1f, -40f, 3f);
+            _masterAudioMixer.SetFloat("Volume", vol);
         }
 
         #endregion
