@@ -511,10 +511,10 @@ AmbientColor 0.784314 0.784314 0.784314
 AmbientIntensity 0.6
 DoubleSidedAreaLights 1
 EnableRadiosity 1
-RadiosityType 1
+RadiosityType 0
 RadiosityInterpolated 1
 RadiosityTransparency 0
-RadiosityIntensity 1
+RadiosityIntensity 2
 RadiosityTolerance 0.2928932
 RadiosityRays 100
 SecondaryBounceRays 50
