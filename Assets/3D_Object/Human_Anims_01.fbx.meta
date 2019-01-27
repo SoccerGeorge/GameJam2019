@@ -80,6 +80,30 @@ ModelImporter:
     100148: QuickRigCharacter_Ctrl_Spine
     100150: QuickRigCharacter_Ctrl_Spine1
     100152: QuickRigCharacter_Ctrl_Spine2
+    100154: Head
+    100156: Hips
+    100158: LeftArm
+    100160: LeftFoot
+    100162: LeftForeArm
+    100164: LeftHand
+    100166: LeftLeg
+    100168: LeftShoulder
+    100170: LeftToeBase
+    100172: LeftUpLeg
+    100174: Neck
+    100176: QuickRigCharacter_Guides
+    100178: Reference
+    100180: RightArm
+    100182: RightFoot
+    100184: RightForeArm
+    100186: RightHand
+    100188: RightLeg
+    100190: RightShoulder
+    100192: RightToeBase
+    100194: RightUpLeg
+    100196: Spine
+    100198: Spine1
+    100200: Spine2
     400000: //RootNode
     400002: Humanoid_v01:Abs
     400004: Humanoid_v01:Chest
@@ -157,6 +181,30 @@ ModelImporter:
     400148: QuickRigCharacter_Ctrl_Spine
     400150: QuickRigCharacter_Ctrl_Spine1
     400152: QuickRigCharacter_Ctrl_Spine2
+    400154: Head
+    400156: Hips
+    400158: LeftArm
+    400160: LeftFoot
+    400162: LeftForeArm
+    400164: LeftHand
+    400166: LeftLeg
+    400168: LeftShoulder
+    400170: LeftToeBase
+    400172: LeftUpLeg
+    400174: Neck
+    400176: QuickRigCharacter_Guides
+    400178: Reference
+    400180: RightArm
+    400182: RightFoot
+    400184: RightForeArm
+    400186: RightHand
+    400188: RightLeg
+    400190: RightShoulder
+    400192: RightToeBase
+    400194: RightUpLeg
+    400196: Spine
+    400198: Spine1
+    400200: Spine2
     2100000: Shirt
     2100002: Shirt_1
     2100004: Shirt_2
@@ -216,8 +264,7 @@ ModelImporter:
     resampleCurves: 1
     optimizeGameObjects: 0
     motionNodeName: 
-    rigImportErrors: "Invalid Avatar Rig Configuration. Missing or invalid transform:\n\tRequired
-      human bone 'Head' not found\n"
+    rigImportErrors: 
     rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
@@ -506,6 +553,22 @@ ModelImporter:
         modified: 0
     - boneName: QuickRigCharacter_Spine2
       humanName: UpperChest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: QuickRigCharacter_RightHand
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: QuickRigCharacter_Head
+      humanName: Head
       limit:
         min: {x: 0, y: 0, z: 0}
         max: {x: 0, y: 0, z: 0}
