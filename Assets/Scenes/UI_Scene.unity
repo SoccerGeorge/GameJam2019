@@ -558,6 +558,26 @@ PrefabInstance:
       propertyPath: ActiveMenuIndex
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1383330931044915312, guid: 7adb129e5dc27734c91770124ae3f525,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1383330931044915312, guid: 7adb129e5dc27734c91770124ae3f525,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1383330931044915312, guid: 7adb129e5dc27734c91770124ae3f525,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1383330931044915312, guid: 7adb129e5dc27734c91770124ae3f525,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1383330931044915597, guid: 7adb129e5dc27734c91770124ae3f525,
         type: 3}
       propertyPath: m_Alpha
