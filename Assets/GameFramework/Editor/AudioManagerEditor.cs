@@ -4,6 +4,7 @@ using UnityEngine;
 using Extensions;
 using GameFramework;
 
+#if UNITY_EDITOR
 [CustomEditor(typeof(AudioManager), true)][CanEditMultipleObjects]
 public class AudioManagerEditor : Editor
 {
@@ -282,3 +283,4 @@ public class AudioManagerEditor : Editor
 
     #endregion
 }
+#endif

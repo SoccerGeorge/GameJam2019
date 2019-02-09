@@ -3,6 +3,7 @@ using UnityEditor;
 using UnityEngine;
 using GameFramework;
 
+#if UNITY_EDITOR
 [CustomEditor(typeof(UIManager), true)][CanEditMultipleObjects]
 public class UIManagerEditor : Editor
 {
@@ -233,3 +234,4 @@ public class UIManagerEditor : Editor
 
     #endregion
 }
+#endif
